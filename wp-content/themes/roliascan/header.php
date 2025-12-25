@@ -16,7 +16,7 @@
                     <?php the_custom_logo(); ?>
                 <?php else : ?>
                     <a href="<?php echo esc_url(home_url('/')); ?>" class="site-logo">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/roliascan-logo.png" alt="<?php bloginfo('name'); ?>">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" alt="<?php bloginfo('name'); ?>">
                     </a>
                 <?php endif; ?>
             </div>

@@ -19,7 +19,7 @@ scp roliascan.zip $SERVER:/tmp/
 echo "✅ Uploaded"
 
 # Deploy
-ssh $SERVER "cd /var/www/wordpress/wp-content/themes && rm -rf roliascan && unzip -o /tmp/roliascan.zip -q && chown -R www-data:www-data roliascan && cd /var/www/wordpress && sudo -u www-data wp cache flush"
+ssh $SERVER "cd /var/www/wordpress/wp-content/themes && rm -rf roliascan && unzip -o /tmp/roliascan.zip && chown -R www-data:www-data roliascan && cd /var/www/wordpress && sudo -u www-data wp cache flush"
 echo "✅ Deployed"
 
 echo ""
