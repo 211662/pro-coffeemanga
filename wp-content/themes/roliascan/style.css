@@ -1,0 +1,15 @@
+/*
+Theme Name: RoliaScan
+Theme URI: https://www.roliascan.com/
+Author: RoliaScan Team
+Author URI: https://www.roliascan.com/
+Description: A modern manga, manhwa, and manhua reading platform theme. Fast, clean, and optimized for mobile users.
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: roliascan
+Tags: blog, entertainment, manga, manhwa, comics, responsive, mobile-friendly
+*/
+
+/* Import Main Stylesheet */
+@import url('assets/css/main.css');

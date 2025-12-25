@@ -1,0 +1,479 @@
+/* =====================================================
+   RoliaScan Theme - Main Stylesheet
+   ===================================================== */
+
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #6F4E37;
+    --secondary-color: #8B4513;
+    --accent-color: #D2691E;
+    --highlight-color: #CD853F;
+    --text-color: #3E2723;
+    --text-dark: #3E2723;
+    --bg-light: #FFFAF0;
+    --bg-dark: #4E342E;
+    --border-color: #DEB887;
+    --transition: all 0.3s ease;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: #FFFAF0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition);
+}
+
+/* =====================================================
+   Header Styles
+   ===================================================== */
+.site-header {
+    background: linear-gradient(135deg, #6F4E37 0%, #8B4513 100%);
+    padding: 15px 0;
+    box-shadow: 0 2px 10px rgba(139,69,19,0.3);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-branding img {
+    height: 50px;
+    width: auto;
+}
+
+.main-navigation .nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.main-navigation .nav-menu a {
+    color: #FFF8DC;
+    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: var(--transition);
+}
+
+.main-navigation .nav-menu a:hover {
+    background-color: #D2691E;
+    color: #fff;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--text-color);
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* =====================================================
+   Banner Section
+   ===================================================== */
+.site-banner {
+    background: linear-gradient(135deg, #8B4513 0%, #D2691E 50%, #CD853F 100%);
+    color: #FFF8DC;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.banner-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    font-weight: 700;
+    color: #FFFAF0;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.domain-box {
+    background-color: rgba(255,248,220,0.15);
+    border: 2px solid #F4A460;
+    border-radius: 15px;
+    padding: 25px;
+    margin: 30px auto;
+    max-width: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.domain-box .access-button {
+    color: #FFF8DC;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.access-text {
+    background-color: #D2691E;
+    color: #fff;
+    padding: 8px 20px;
+    border-radius: 25px;
+    font-weight: 600;
+}
+
+.update-text {
+    font-size: 1.1rem;
+    margin: 20px 0;
+}
+
+.social-links {
+    margin-top: 40px;
+}
+
+.social-links p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+.social-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.social-btn {
+    background-color: rgba(255,248,220,0.2);
+    color: #FFF8DC;
+    padding: 12px 25px;
+    border-radius: 25px;
+    border: 1px solid rgba(255,248,220,0.4);
+    transition: var(--transition);
+}
+
+.social-btn:hover {
+    background-color: #D2691E;
+    border-color: #D2691E;
+    transform: translateY(-2px);
+}
+
+/* =====================================================
+   Manga Updates Section
+   ===================================================== */
+.manga-updates {
+    padding: 60px 0;
+    background-color: var(--bg-light);
+}
+
+.section-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.manga-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.manga-card {
+    background-color: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(139,69,19,0.15);
+    transition: var(--transition);
+    border: 1px solid #DEB887;
+}
+
+.manga-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(139,69,19,0.25);
+    border-color: #D2691E;
+}
+
+.manga-thumbnail {
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+}
+
+.manga-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.manga-card:hover .manga-thumbnail img {
+    transform: scale(1.1);
+}
+
+.manga-title {
+    padding: 15px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    text-align: center;
+}
+
+/* =====================================================
+   About Section
+   ===================================================== */
+.about-section {
+    padding: 60px 0;
+}
+
+.about-content h1 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.about-content h2 {
+    font-size: 2rem;
+    color: var(--secondary-color);
+    margin: 50px 0 30px;
+}
+
+.about-content h3 {
+    font-size: 1.5rem;
+    color: var(--accent-color);
+    margin: 30px 0 15px;
+}
+
+.intro-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.feature-image {
+    margin: 40px 0;
+    text-align: center;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.feature-image img {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin: 40px 0;
+}
+
+.feature-item {
+    background-color: var(--bg-light);
+    padding: 30px;
+    border-radius: 15px;
+    transition: var(--transition);
+}
+
+.feature-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.feature-item h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.genre-list, .benefits-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 20px 0;
+}
+
+.genre-list li, .benefits-list li {
+    padding: 12px 0;
+    padding-left: 30px;
+    position: relative;
+    font-size: 1.05rem;
+}
+
+.genre-list li:before, .benefits-list li:before {
+    content: "•";
+    color: #D2691E;
+    font-size: 1.5rem;
+    position: absolute;
+    left: 0;
+    top: 8px;
+}
+
+/* =====================================================
+   FAQ Section
+   ===================================================== */
+.faq-section {
+    margin: 40px 0;
+}
+
+.faq-item {
+    background-color: #FFF8DC;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border-left: 4px solid #D2691E;
+}
+
+.faq-item h3 {
+    color: #6F4E37;
+    margin-bottom: 10px;
+}
+
+.faq-item p {
+    color: var(--text-dark);
+    line-height: 1.7;
+}
+
+/* =====================================================
+   Footer Styles
+   ===================================================== */
+.site-footer {
+    background: linear-gradient(135deg, #6F4E37 0%, #4E342E 100%);
+    color: #FFF8DC;
+    padding: 40px 0 20px;
+    margin-top: 60px;
+}
+
+.footer-navigation {
+    margin-bottom: 30px;
+}
+
+.footer-menu {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    list-style: none;
+}
+
+.footer-menu a {
+    color: #FFF8DC;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.footer-menu a:hover {
+    color: #F4A460;
+}
+
+.footer-copyright {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,248,220,0.2);
+    color: #DEB887;
+}
+
+/* =====================================================
+   Responsive Design
+   ===================================================== */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .main-navigation .nav-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background-color: var(--primary-color);
+        padding: 20px;
+        gap: 10px;
+    }
+
+    .main-navigation .nav-menu.active {
+        display: flex;
+    }
+
+    .banner-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .domain-box {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .social-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .manga-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 15px;
+    }
+
+    .manga-thumbnail {
+        height: 250px;
+    }
+
+    .about-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .about-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-menu {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .banner-content h1 {
+        font-size: 1.5rem;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .manga-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
